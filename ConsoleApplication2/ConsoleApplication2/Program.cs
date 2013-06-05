@@ -9,13 +9,20 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int i = 0;
-            int[] massiv = { 1, 2, 3, 4, 5, 6, 7 };
+          
+            int i,N;
+            Console.Write("Введите число строк матрицы N=");
+            N = Convert.ToInt32(Console.ReadLine());
+            int[] massiv = new int[N];          
+            for (i = 0; i < N; i++) 
+                {
+                    massiv[i] = Convert.ToInt32(Console.ReadLine());
+                }
+            Console.WriteLine();
             for (i = massiv.Length - 1; i >= 0; i--)
             {
                 Console.Write(" " + massiv[i]);
             }
-            Console.ReadLine();
         }
     }
 }
